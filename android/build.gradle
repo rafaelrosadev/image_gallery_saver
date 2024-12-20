@@ -33,7 +33,19 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    // Configuração do Java para garantir compatibilidade
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17  // Defina para Java 17
+        targetCompatibility JavaVersion.VERSION_17  // Defina para Java 17
+    }
+    // Configuração do Kotlin para garantir compatibilidade com Java 17
+    kotlinOptions {
+        jvmTarget = "17"  // Configure o Kotlin para usar a versão 17 do Java
     }
     lintOptions {
         disable 'InvalidPackage'
